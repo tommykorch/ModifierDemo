@@ -19,7 +19,8 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,4 +59,13 @@ fun DefaultPreview() {
     ModifierDemoTheme {
         DemoScreen()
     }
+}
+@Composable
+fun CustomImage(image: Int, modifier: Modifier = Modifier) {
+    Image(
+        painter = painterResource(image),
+        contentDescription = null,
+        modifier
+
+    )
 }
